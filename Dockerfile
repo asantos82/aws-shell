@@ -1,6 +1,6 @@
 FROM python:3.6.4-alpine3.7
 
-MAINTAINER dre.santos@gmail.com
+MAINTAINER Andre Santos <dre.santos@gmail.com>
 
 ARG USAGE_
 ARG BUILD_DATE
@@ -17,7 +17,8 @@ LABEL org.label.schema.build-date=$BUILD_DATE \
       org.label.vendor="A Santos" \
       org.label.version="1.0" \
       org.label.schema-version="1.0.0-rc.1" \
-      org.label.docker.cmd="docker run --rm -it -v \$HOME/.aws:/root/.aws dresantos/aws-shell"
+      org.label.docker.cmd="docker run --rm -it -v \$HOME/.aws:/root/.aws dresantos/aws-shell" \
+      org.label-schema.license="GPL-3.0"
 
 RUN pip install aws-shell
 
