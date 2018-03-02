@@ -6,5 +6,5 @@ echo "Build hook running"
 docker build --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
 	     --build-arg VCS_URL=`git config --get remote.origin.url | rev | cut -c5- | rev` \
              --build-arg VCS_REF=`git rev-parse --short HEAD` \
-	     --build-arg USAGE_=`git config --get remote.origin.url | rev | cut -c5- | rev`/blob/master/README.md
+	     --build-arg USAGE_=`git config --get remote.origin.url | rev | cut -c5- | rev`/blob/master/README.md \
              -t $IMAGE_NAME .
