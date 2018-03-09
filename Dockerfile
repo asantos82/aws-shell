@@ -20,6 +20,6 @@ LABEL org.label.schema.build-date=$BUILD_DATE \
       org.label.docker.cmd="docker run --rm -it -v \$HOME/.aws:/root/.aws dresantos/aws-shell" \
       org.label-schema.license="GPL-3.0"
 
-RUN pip install aws-shell
+RUN pip install aws-shell && pip install groff
 
 CMD /usr/local/bin/aws-shell
